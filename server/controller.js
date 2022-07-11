@@ -45,6 +45,7 @@ const createCheckout = async( req, res ) => {
             const {paymentLink} = response.result;
             res.status(200).send(paymentLink)
         }else{
+            console.log(response)
             res.status(503).send(response.result);
         }
     } catch (error) {
