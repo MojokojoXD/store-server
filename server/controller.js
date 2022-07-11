@@ -27,7 +27,7 @@ const createCheckout = async( req, res ) => {
                 {
                     name: "Shipping",
                     amountMoney:{
-                        amount: 750,
+                        amount: 0,
                         currency: "USD",
                     },
                     calculationPhase: "SUBTOTAL_PHASE"
