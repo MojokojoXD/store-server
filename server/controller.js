@@ -23,7 +23,6 @@ const createCheckout = async( req, res ) => {
           description: "Kate dalley comemorative coin",
           order: {
             locationId: getLocation,
-            createdAt: date.format(time, "ddd, MMM DD YYYY hh:mm A [GMT]Z"),
             serviceCharges: [
                 {
                     amountMoney:{
