@@ -29,7 +29,8 @@ const createCheckout = async( req, res ) => {
                     amountMoney:{
                         amount: 750,
                         currency: "USD",
-                    }
+                    },
+                    calculationPhase: "SUBTOTAL_PHASE"
                 }
             ],
             lineItems: [
