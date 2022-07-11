@@ -25,6 +25,7 @@ const createCheckout = async( req, res ) => {
             locationId: getLocation,
             serviceCharges: [
                 {
+                    name: "Shipping",
                     amountMoney:{
                         amount: 750,
                         currency: "USD",
