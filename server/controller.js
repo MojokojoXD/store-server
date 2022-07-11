@@ -24,6 +24,14 @@ const createCheckout = async( req, res ) => {
           order: {
             locationId: getLocation,
             createdAt: date.format(time, "ddd, MMM DD YYYY hh:mm A [GMT]Z"),
+            serviceCharges: [
+                {
+                    amountMoney:{
+                        amount: 750,
+                        currency: "USD",
+                    }
+                }
+            ]
             lineItems: [
               {
                 quantity: "1",
