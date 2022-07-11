@@ -1,6 +1,8 @@
 const {client,getLocation} = require('./squareConfig');
 const {v4:uuidv4} = require("uuid");
 
+
+//create checkout order
 const createCheckout = async( req, res ) => {
     const idempotencyKey = uuidv4();
 
