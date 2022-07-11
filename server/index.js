@@ -3,9 +3,14 @@ const cors = require('cors');
 // const path = require('path');
 const express = require('express');
 const { createCheckout } = require("./controller");
+
 const app = express();
+const corsOptions = {
+    origin: "http//localhost:8000"
+}
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 const PORT = process.env.PORT || 3000;
  
  

@@ -31,7 +31,7 @@ const createCheckout = async( req, res ) => {
                         currency: "USD",
                     }
                 }
-            ]
+            ],
             lineItems: [
               {
                 quantity: "1",
