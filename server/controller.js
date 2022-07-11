@@ -48,7 +48,7 @@ const createCheckout = async( req, res ) => {
             res.status(503).send(response.result);
         }
     } catch (error) {
-        console.log(response)
+        console.log(error)
         res.status(500).send(error); 
     }
 }
