@@ -1,10 +1,13 @@
 const {client,getLocation} = require('./squareConfig');
 const {v4:uuidv4} = require("uuid");
+const date = require("date-and-time");
 
 
 //create checkout order
 const createCheckout = async( req, res ) => {
     const idempotencyKey = uuidv4();
+
+    const time = new Date();
 
     try {
         const response = await client.checkoutApi.createPaymentLink({
@@ -20,6 +23,7 @@ const createCheckout = async( req, res ) => {
           description: "Kate dalley comemorative coin",
           order: {
             locationId: getLocation,
+            createdAt: date.format(time, "ddd, MMM DD YYYY hh:mm A [GMT]Z"),
             lineItems: [
               {
                 quantity: "1",
