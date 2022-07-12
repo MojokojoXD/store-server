@@ -5,6 +5,7 @@ const date = require("date-and-time");
 
 //create checkout order
 const createCheckout = async( req, res ) => {
+    const {quantity} = req.body;
     const idempotencyKey = uuidv4();
 
     const time = new Date();
@@ -35,7 +36,7 @@ const createCheckout = async( req, res ) => {
             ],
             lineItems: [
               {
-                quantity: "1",
+                quantity: quantity,
                 catalogObjectId: "KFOUYHD3IE7VQTARCAPZDPLJ",
               },
             ],
