@@ -5,7 +5,7 @@ const date = require("date-and-time");
 
 //create checkout order
 const createCheckout = async( req, res ) => {
-    console.log(req.body)
+    const {quantity} = req.body;
     const idempotencyKey = uuidv4();
 
     const time = new Date();
