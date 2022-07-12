@@ -36,7 +36,7 @@ const createCheckout = async( req, res ) => {
             ],
             lineItems: [
               {
-                quantity: quantity,
+                quantity: `${quantity}`,
                 catalogObjectId: "KFOUYHD3IE7VQTARCAPZDPLJ",
               },
             ],
