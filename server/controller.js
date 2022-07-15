@@ -14,14 +14,13 @@ const createCheckout = async( req, res ) => {
         const response = await client.checkoutApi.createPaymentLink({
           idempotencyKey,
           checkoutOptions: {
-            acceptedPaymentMethods: {
-              applePay: true,
-              cashAppPay: true,
-              googlePay: true,
-            },
+            // acceptedPaymentMethods: {
+            //   applePay: true,
+            //   cashAppPay: true,
+            //   googlePay: true,
+            // },
             askForShippingAddress: true,
           },
-          description: "Kate dalley comemorative coin",
           order: {
             locationId: getLocation,
             serviceCharges: [
