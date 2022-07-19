@@ -6,8 +6,8 @@ const { completeOrder,calculateOrder,getStock } = require("./controller");
 
 const app = express();
 const corsOptions = {
-    origin: "http://localhost:8000"
-}
+  origin: "https://yourcausestore.vercel.app",
+};
 
 app.use(cors(corsOptions));
 app.use(express.json());
