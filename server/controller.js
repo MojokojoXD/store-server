@@ -77,12 +77,16 @@ const completeOrder = async( req, res ) => {
                 buyerEmailAddress: customer.email,
                 verificationToken: auth.buyer.token,
               });
-              
+              console.log(response2)
               res
                 .status(200)
-                .send({
-                  receipt: response2.result.payment.receiptUrl
-                });
+                .send(
+                  JSON.parse(
+                    JSON.stringify(response2.result, (key, value) =>
+                      typeof value === "bigint" ? value.toString() : value
+                    )
+                  )
+                );
             } catch (error) {
               console.log(error)
               res.status(400).send(error)
