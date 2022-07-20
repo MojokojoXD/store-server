@@ -77,7 +77,6 @@ const completeOrder = async( req, res ) => {
                 buyerEmailAddress: customer.email,
                 verificationToken: auth.buyer.token,
               });
-              console.log(response2)
               res
                 .status(200)
                 .send(
@@ -139,7 +138,6 @@ const calculateOrder = async(req,res) => {
 
 const getStock = async(req,res) =>{
   const{catalogId} = req.params;
-  console.log("i'm here")
   try {
   const response = await client.inventoryApi.retrieveInventoryCount(catalogId,getLocation);
 
