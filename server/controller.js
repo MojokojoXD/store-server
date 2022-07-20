@@ -135,7 +135,7 @@ const calculateOrder = async(req,res) => {
 
 const getStock = async(req,res) =>{
   const{catalogId} = req.params;
-
+  console.log("i'm here")
   try {
   const response = await client.inventoryApi.retrieveInventoryCount(catalogId,getLocation);
 
