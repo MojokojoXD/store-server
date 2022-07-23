@@ -2,6 +2,7 @@
 
 const nodemailer = require('nodemailer')
 
+//create email transport
 const emailConfirmation = async(campaign,orderDetails) => {
 
     const {receiptNumber,shippingAddress,name,email} = orderDetails;
