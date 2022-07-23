@@ -3,6 +3,7 @@ const cors = require('cors');
 // const path = require('path');
 const express = require('express');
 const { completeOrder,calculateOrder,getStock } = require("./controller");
+const {emailConfirmation} = require('./email/emailConfig')
 
 const app = express();
 const corsOptions = {
@@ -16,7 +17,7 @@ const PORT = process.env.PORT || 3000;
  
 //Endpoints
 app.get("/", ( req, res ) => {
-    res.status(200).send("Yourcausecampaigns");
+    emailConfirmation();
 })
 app.post("/complete-order",completeOrder);
 

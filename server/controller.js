@@ -1,6 +1,7 @@
 const {client,getLocation} = require('./squareConfig');
 const {v4:uuidv4} = require("uuid");
 const {shipping:determineShipping,capitalize} = require('./utlis')
+const {emailConfirmation} =require("./email/emailConfig")
 
 
 //create checkout order
@@ -96,7 +97,7 @@ const completeOrder = async( req, res ) => {
                     )
                   );
 
-
+                emailConfirmation(null,{receiptNumber,shippingAddress,name:`${capitalize(customer.firstName)} ${capitalize(customer.lastName)}`,email:customer.email});
                 
               }
           
