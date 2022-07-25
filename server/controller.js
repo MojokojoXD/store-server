@@ -135,7 +135,7 @@ const calculateOrder = async(req,res) => {
             {
               name: "Shipping and handling",
               amountMoney: {
-                amount: 0,
+                amount: 950,
                 currency: "USD",
               },
               calculationPhase: "SUBTOTAL_PHASE",
